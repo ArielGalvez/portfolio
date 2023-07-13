@@ -1,0 +1,50 @@
+---
+export interface Props {
+  yearStart: string;
+  yearEnd: string;
+  company: string;
+  description: string;
+  techStack: string;
+  projectName: string;
+  role: string;
+}
+
+const { yearStart, yearEnd, company, description, techStack, projectName, role } = Astro.props;
+---
+
+<article class='relative mb-5 w-full h-full min-h-[144px]'>
+  <div
+    class='relative float-none min-h-[54px] ml-28 w-auto mb-5 md:float-left md:max-w-[44%] md:ml-0 md:w-full md:mb-0'
+  >
+    <div
+      class='bg-white rounded-md p-3 shadow-sm min-h-[65px] relative arrow before:left-[-8px] md:before:left-[calc(100%-8px)]'
+    >
+      <p>
+        {description}
+      </p>
+      <p class='text-gray-400 text-xs static text-right md:absolute md:right-3 md:bottom-3'>
+        {company}
+      </p>
+    </div>
+    <p class='text-right'>{projectName}</p>
+  </div>
+  <div
+    class='float-none min-h-[54px] ml-28 w-auto h-full md:float-right md:max-w-[44%] md:ml-0 md:w-full'
+  >
+    <div
+      class='bg-white rounded-md p-3 shadow-sm min-h-[54px] relative arrow before:left-[-8px] before:opacity-0 md:before:opacity-100'
+    >
+      <p class='text-gray-400'>Tech Stack</p>
+      <p>
+        {techStack}
+      </p>
+    </div>
+    <p class='text-right'>{role}</p>
+  </div>
+  <div
+    class='absolute top-4 left-[48px] w-12 h-12 ml-[-24px] bg-blue-500 text-white rounded-full flex flex-col justify-center items-center md:left-[50%]'
+  >
+    <span class='leading-none font-bold'>{yearStart}</span>
+    <span class='leading-none font-bold text-xs'>{yearEnd}</span>
+  </div>
+</article>
