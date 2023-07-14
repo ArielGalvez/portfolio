@@ -1,0 +1,12 @@
+---
+import { colors, projects } from '../data/projects';
+import Card from './Card.astro';
+---
+
+<ul class='gap-6 py-4 grid' style='grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));'>
+  {
+    projects.map(({ id, title, img, repo, demo }) => (
+      <Card id={id} title={title} img={img} repo={repo} demo={demo} />
+    ))
+  }
+</ul>

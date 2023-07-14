@@ -72,7 +72,7 @@ const Navbar = () => {
 							</a>
 						</li>
 						<li>
-							<a href=''>
+							<a href='https://github.com/ArielGalvez'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 48 48'
