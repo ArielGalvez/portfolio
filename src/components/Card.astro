@@ -17,11 +17,11 @@ const { id, title, img, repo, demo } = Astro.props;
       src={img}
       style={`view-transition-name: project-${id}`}
     />
-    <h3 class="absolute bottom-0 left-0 h-40px w-full bg-white p-2 rounded-bl rounded-br font-semibold"
-    style={`view-transition-name: project-title-${id}`}
-    >
-      {title}
-    </h3>
+    <div class="absolute bottom-0 left-0 h-40px w-full bg-white p-2 rounded-bl rounded-br font-semibold">
+      <h3 style={`view-transition-name: project-title-${id}`}>
+        {title}
+      </h3>
+    </div>
     <div class="absolute bottom-0 right-0 flex gap-2 p-2">
       {
         repo &&
