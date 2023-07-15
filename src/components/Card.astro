@@ -9,8 +9,8 @@ export interface Props {
 
 const { id, title, img, repo, demo } = Astro.props;
 ---
-<li class="relative">
-  <a class='transition-all shadow-md hover:contrast-125 hover:shadow-2xl' href={`/${id}`}>
+<li class="relative transition-all shadow-sm hover:contrast-125 hover:shadow-md">
+  <a href={`/${id}`}>
     <img
       alt={`project ${title}`}
       class='aspect-[640/487] h-full object-cover w-full max-w-full rounded'

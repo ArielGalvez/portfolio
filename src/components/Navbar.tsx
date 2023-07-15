@@ -41,7 +41,7 @@ const Navbar = () => {
 
 	return (
 		<>
-			<header className='sticky top-0 backdrop-blur-sm'>
+			<header className='sticky top-0 backdrop-blur-sm z-40'>
 				<nav className='flex justify-between items-center'>
 					<ul className='flex gap-3'>
 						<li>
