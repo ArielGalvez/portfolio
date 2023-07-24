@@ -16,7 +16,10 @@ export function SocialMedia(): React.ReactElement {
 	return (
 		<>
 			<li>
-				<a href='https://www.linkedin.com/in/ariel-g%C3%A1lvez-3b5119260/'>
+				<a
+					href='https://www.linkedin.com/in/ariel-g%C3%A1lvez-3b5119260/'
+					className='transition-all shadow-sm hover:contrast-125 hover:shadow-md'
+				>
 					<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' width='48px' height='48px'>
 						<path
 							fill='#0078d4'
@@ -38,7 +41,10 @@ export function SocialMedia(): React.ReactElement {
 				</a>
 			</li>
 			<li>
-				<a href='https://github.com/ArielGalvez'>
+				<a
+					href='https://github.com/ArielGalvez'
+					className='transition-all shadow-sm hover:contrast-125 hover:shadow-md'
+				>
 					<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' width='48px' height='48px'>
 						<path
 							fill='#455A64'
@@ -65,7 +71,7 @@ export function SocialMedia(): React.ReactElement {
 			</li>
 			<li>
 				<button onClick={downloadCV}>
-					<img src='./cv-48.png' alt='download_cv' />
+					<img src='./cv-48.png' alt='download_cv' className='transition-all hover:contrast-125' />
 				</button>
 			</li>
 		</>

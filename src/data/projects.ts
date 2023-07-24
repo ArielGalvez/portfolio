@@ -54,14 +54,14 @@ export const projects = [
 		demo: 'https://web-app-ui-design.netlify.app/'
 	},
 	{
-		id: 'weather-app-react',
-		title: 'Weather App React',
-		img: './projects/rbg-strategy.jpg',
+		id: 'weather-app',
+		title: 'Weather App',
+		img: './projects/weather-app.jpg',
 		description: `
 		Web site created using create-react-app. Solution for a challenge from Devchallenges.io
 		`,
 		public: false,
-		demo: 'https://rbg-strategy.netlify.app/'
+		demo: 'https://esweatherapp.netlify.app/'
 	},
 	{
 		id: 'css-skeleton',
