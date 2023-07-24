@@ -52,7 +52,7 @@ if (document.startViewTransition) {
 		const toUrl = new URL(event.destination.url)
 
 		// es una página externa? si es así, lo ignoramos
-		if (location.origin !== toUrl.origin) return
+		if (location.origin !== toUrl.origin || toUrl.protocol === 'blob:') return
 
 		// if (location.href.includes('#')) return
 

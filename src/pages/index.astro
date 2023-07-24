@@ -4,10 +4,16 @@ import Timeline from '../components/Timeline.astro';
 import Navbar from '../components/Navbar';
 import Section from '../layouts/Section.astro';
 import Projects from '../components/Projects.astro';
+import About from '../components/About.astro';
+import Presentation from '../components/Presentation.astro';
+import Contact from '../components/Contact.astro';
 ---
 
 <Layout title='Ariel Galvez Portfolio'>
 	<main class='px-3 max-w-5xl mx-auto flex flex-col-reverse'>
+		<Section id='contact' title='Contact me'>
+			<Contact/>
+		</Section>
 		<Section id='projects' title='Projects'>
 			<Projects/>
 		</Section>
@@ -15,26 +21,9 @@ import Projects from '../components/Projects.astro';
 			<Timeline />
 		</Section>
 		<Section id='about' title='About me'>
-			<p class='my-3 leading-4'>
-				I'm very curious and keep continuously learning new technologies and improving my skills.
-			</p>
-			<p class='my-3 leading-4'>
-				Attentive to quality of work in every stage of the development lifecycle from design,
-				coding, debugging, testing, and maintenance.
-			</p>
-			<p class='my-3 leading-4'>
-				Strong knowledge of HTML+CSS and ability to implement any complex design taking care of the
-				responsive design.
-			</p>
-			<p class='my-3 leading-4'>Capability to learn and adapt to other technologies.</p>
-			<p class='my-3 leading-4'>Bachelor's degree in computer science (System Engineering).</p>
+			<About/>
 		</Section>
-		<section class='text-center py-4'>
-			<h1 class='text-2xl xs:text-4xl font-bold text-gray-400'>
-				Hey there! I'm <span class='text-blue-500'>Ariel Galvez</span>
-			</h1>
-			<p class='text-xl font-bold text-gray-500'>Full stack developer</p>
-		</section>
+		<Presentation/>
 		<Navbar client:load />
 	</main>
 </Layout>
