@@ -7,20 +7,20 @@ const {} = Astro.props;
 
 <section class='relative my-2'>
 	<p
-		class='table rounded w-full max-w-[120px] bg-gray-200 p-2 left-11 md:m-auto text-center leading-none text-xs'
+		class='table rounded w-full max-w-[120px] bg-gray-200 dark:bg-gray-600 p-2 left-11 md:m-auto text-center leading-none text-xs'
 	>
 		🚀 Going for more
 	</p>
 	<div
 		id='vertical-line'
-		class='absolute top-0 w-[3px] h-full left-12 ml-[-2px] z-[-1] bg-gray-300 md:left-[50%]'
+		class='absolute top-0 w-[3px] h-full left-12 ml-[-2px] z-[-1] bg-gray-300 dark:bg-gray-700 md:left-[50%]'
 	>
 	</div>
 	<div class='py-8'>
 		{experience.map((exp) => <TimelineArticle {...exp} />)}
 	</div>
 	<p
-		class='table rounded w-full max-w-[120px] bg-gray-200 p-2 left-11 md:m-auto text-center leading-none text-xs'
+		class='table rounded w-full max-w-[120px] bg-gray-200 dark:bg-gray-600 p-2 left-11 md:m-auto text-center leading-none text-xs'
 	>
 		🏁 Started my trip
 	</p>

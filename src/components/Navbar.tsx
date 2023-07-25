@@ -2,9 +2,12 @@ import React, { useMemo, useRef, useState } from 'react';
 import NavbarItem from './NavbarItem';
 import useClickOutside from '../hooks/useClickOutside';
 import { SocialMedia } from './SocialMedia';
+import { useDarkMode } from '../hooks/useDarkMode';
+import { DarkModeSwitch } from './DarkModeSwitch';
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [colorTheme, setTheme] = useDarkMode();
 	const menuRef = useRef<HTMLUListElement | null>(null);
 	useClickOutside({
 		ref: menuRef,
@@ -35,9 +38,11 @@ const Navbar = () => {
 				<NavbarItem title='Experience' href='#experience' />
 				<NavbarItem title='Projects' href='#projects' />
 				<NavbarItem title='Contact' href='#contact' />
+				{/* <button onClick={() => setTheme()}>{colorTheme}</button> */}
+				<DarkModeSwitch theme={colorTheme} onClick={setTheme} />
 			</>
 		),
-		[]
+		[colorTheme, setTheme]
 	);
 
 	return (
@@ -58,17 +63,17 @@ const Navbar = () => {
 					onClick={handleClick}
 				>
 					<span
-						className={`absolute block w-4 h-1 bg-black rounded-sm sibling-checked:bg-blue-500 ${
+						className={`absolute block w-4 h-1 bg-black dark:bg-white rounded-sm sibling-checked:bg-blue-500 ${
 							isOpen ? 'w-8 rotate-45 top-5' : 'top-2'
 						} transition-all`}
 					></span>
 					<span
-						className={`absolute block top-4 w-6 h-1 bg-black rounded-sm ${
+						className={`absolute block top-4 w-6 h-1 bg-black dark:bg-white rounded-sm ${
 							isOpen && 'opacity-0'
 						} transition-all`}
 					></span>
 					<span
-						className={`absolute block w-8 h-1 bg-black rounded-sm ${
+						className={`absolute block w-8 h-1 bg-black dark:bg-white rounded-sm ${
 							isOpen ? 'rotate-[-45deg] top-5' : 'top-6'
 						} transition-all`}
 					></span>
@@ -78,7 +83,7 @@ const Navbar = () => {
 				<div className='fixed top-0 right-0 w-[100vw] h-[100vh] bg-[rgba(0,0,0,0.1)] sm:hidden overflow-hidden'>
 					<ul
 						ref={menuRef}
-						className='absolute right-0 bg-gray-100
+						className='absolute right-0 bg-[var(--bg-color)]
 									 top-0 h-full w-full xs:w-48 flex flex-col pt-12 shadow-md p-4 gap-1
 									 animate-[wiggle_0.333s_ease-in-out_forwards] z-20'
 					>
