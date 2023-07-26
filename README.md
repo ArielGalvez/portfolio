@@ -1,7 +1,7 @@
 # portfolio
 Welcome to my portfolio, I will try Astro + Tailwind to build this page
 
-# view
+# resources
 [Demo live here](https://arielgalvez.github.io/portlofio)
 
 
