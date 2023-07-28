@@ -33,6 +33,7 @@ const { title } = Astro.props;
 		--bg-color: #f6f6f6;
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--tw-gradient-stops: rgb(166,218,248) 50%, rgb(211,203,255), rgb(171,238,219), rgb(254,202,177), rgb(254,177,191);
 	}
 
 	.dark {
@@ -45,6 +46,22 @@ const { title } = Astro.props;
 		background-color: var(--bg-color);
 		scroll-behavior: smooth;
 	}
+
+	.rain {
+    /* padding: 0 0.25rem; */
+  }
+  .drop {
+		/* margin: 0.25rem 0; */
+    /* padding: 1rem; */
+    display: block;
+    width: 2vmax;
+    height: 2vmax;
+    font-size: 2vmax;
+    /* color: #9bff9b11; */
+    color: transparent;
+    text-align: center;
+  }
+
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
