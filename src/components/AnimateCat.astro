@@ -2,57 +2,54 @@
 /* taken from https://codepen.io/bgop/pen/XPgLra */
 ---
 
-<div id='wrapper'>
-	<section class='cat'>
-		<div class='cat-head'>
-			<div class='eyes'>
-				<div class='eye'></div>
-				<div class='eye'></div>
-			</div>
+<section class='cat'>
+	<div class='cat-head'>
+		<div class='eyes'>
+			<div class='eye'></div>
+			<div class='eye'></div>
 		</div>
-		<div class='cat-body'>
-			<div class='tail'></div>
-		</div>
-	</section>
-</div>
-<!--  -->
+	</div>
+	<div class='cat-body'>
+		<div class='tail'></div>
+	</div>
+</section>
 <style is:inline>
 	.cat {
-		margin-top: 20px;
-		margin-right: 32px;
+		margin-top: 2vmax;
+		margin-right: 2.7vmax;
 	}
 	.cat-head {
-		width: 40px;
-		height: 40px;
-		background: #292b31;
+		width: 4vmax;
+		height: 4vmax;
+		background: var(--cat-color);
 		border-radius: 50% 50% 100% 100%;
 		position: relative;
 	}
 	.cat-head::before,
 	.cat-head::after {
-		width: 10px;
-		height: 3px;
+		width: 1.2vmax;
+		height: 0.5vmax;
 		content: '';
-		background-color: blue;
+		background-color: var(--cat-color);
 		border-radius: 5% 100% 0 0;
-		border-top: 10px solid #292b31;
-		border-left: 4px solid #292b31;
+		border-top: 1vmax solid var(--cat-color);
+		border-left: 0.4vmax solid var(--cat-color);
 		position: absolute;
 		-webkit-transform: rotate(-5deg);
 		transform: rotate(-5deg);
-		top: -5px;
-		left: 0px;
+		top: -0.5vmax;
+		left: 0;
 	}
 	.cat-head::after {
 		left: auto;
-		right: 0px;
+		right: 0;
 		-webkit-transform: scaleX(-1) rotate(-5deg);
 		transform: scaleX(-1) rotate(-5deg);
 		-webkit-animation: move-ear 3s ease-in infinite;
 		animation: move-ear 3s ease-in infinite;
 	}
 	.cat-head .eyes {
-		height: 30px;
+		height: 3vmax;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -63,12 +60,12 @@
 		align-items: center;
 	}
 	.cat-head .eyes .eye {
-		width: 6px;
-		height: 6px;
-		background-color: #292b31;
+		width: 0.6vmax;
+		height: 0.6vmax;
+		background-color: #4C4C4C;
 		border-radius: 50%;
-		-webkit-box-shadow: 0 0 0 3px #00d382;
-		box-shadow: 0 0 0 3px #00d382;
+		-webkit-box-shadow: 0 0 0 0.3vmax var(--cat-eyes-color);
+		box-shadow: 0 0 0 0.3vmax var(--cat-eyes-color);
 		z-index: 5;
 		position: relative;
 		-webkit-animation: blink 3s ease-out infinite;
@@ -76,13 +73,13 @@
 	}
 	.cat-head .eyes .eye::after {
 		content: '';
-		width: 2px;
-		height: 2px;
+		width: 0.2vmax;
+		height: 0.2vmax;
 		background-color: #ffdfdf;
 		border-radius: 50%;
 		position: absolute;
-		top: 0px;
-		left: 3px;
+		top: 0;
+		left: 0.3vmax;
 	}
 	.cat-head .eyes .eye:last-child {
 		-webkit-transform: scaleX(-1);
@@ -90,39 +87,39 @@
 	}
 	.cat-head .eyes .eye:last-child::after {
 		left: auto;
-		right: 3px;
+		right: 0.3vmax;
 	}
 	.cat-body {
-		height: 80px;
-		width: 38px;
-		background: #292b31;
+		height: 8vmax;
+		width: 3.8vmax;
+		background: var(--cat-color);
 		border-radius: 100% 100% 70% 70%;
 		position: relative;
-		top: -12px;
+		top: -1.2vmax;
 	}
 	.cat-body .tail {
-		width: 56px;
-		height: 26px;
+		width: 5.6vmax;
+		height: 2.6vmax;
 		background-color: transparent;
 		border-radius: 50%;
-		border: 8px solid #292b31;
+		border: 0.8vmax solid var(--cat-color);
 		border-left-color: transparent;
 		border-top-color: transparent;
 		position: absolute;
-		bottom: 0px;
-		left: 5px;
+		bottom: 0;
+		left: 0.5vmax;
 		-webkit-animation: move-tail 4s ease-in infinite;
 		animation: move-tail 4s ease-in infinite;
 	}
 	.cat-body .tail::after {
 		content: '';
-		width: 9px;
-		height: 10px;
-		background-color: #292b31;
+		width: 0.9vmax;
+		height: 1vmax;
+		background-color: var(--cat-color);
 		position: absolute;
-		right: -5px;
+		right: -0.5vmax;
 		border-radius: 50%;
-		top: -4px;
+		top: -0.4vmax;
 		-webkit-transform: skew(44deg, -26deg);
 		transform: skew(44deg, -26deg);
 	}
@@ -155,10 +152,10 @@
 	@keyframes move-tail {
 		50%,
 		60% {
-			width: 56px;
+			width: 5.6vmax;
 		}
 		85% {
-			width: 40px;
+			width: 4vmax;
 		}
 	}
 </style>

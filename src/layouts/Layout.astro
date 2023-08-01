@@ -31,14 +31,16 @@ const { title } = Astro.props;
 	@import url(https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed);
 	:root {
 		--bg-color: #f6f6f6;
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 		--tw-gradient-stops: #3B82F6 50%, rgb(166,218,248), rgb(211,203,255), rgb(171,238,219), rgb(254,202,177), rgb(254,177,191);
+		--cat-color: #393939;
+		--cat-eyes-color: #B8CD8E;
 	}
 
 	.dark {
   	color-scheme: dark;
 		--bg-color: #292b31;
+		--cat-color: #DCD7D3;
+		--cat-eyes-color: #6A97C3;
 	}
 
 	html {
@@ -61,9 +63,6 @@ const { title } = Astro.props;
     color: transparent;
     text-align: center;
   }
-
-	/* cat */
-	/* end cat */
 
 	@tailwind base;
 	@tailwind components;
