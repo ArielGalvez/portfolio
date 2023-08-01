@@ -10,7 +10,7 @@ export function DarkModeSwitch(props: Props): React.ReactElement {
 
 	return (
 		<button
-			className='relative w-8 h-8 overflow-hidden rounded-full hover:text-blue-500 hover:bg-black/10 dark:hover:bg-white/10'
+			className='relative w-8 h-8 overflow-hidden rounded-full hover:text-blue-500'
 			onClick={onClick}
 		>
 			<div

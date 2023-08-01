@@ -172,8 +172,7 @@ export function RainSection(props: Props): React.ReactElement {
 			ref={ref}
 			className={`flex overflow-hidden ${className}`}
 			style={{
-				minHeight: `calc(2vmax*${rows})`,
-				transform: `perspective(190px) rotateX(45deg);`
+				minHeight: `calc(2vmax*${rows})`
 			}}
 		></section>
 	);
