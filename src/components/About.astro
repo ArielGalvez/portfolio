@@ -1,8 +1,11 @@
 ---
-import { about } from "../data/about";
+import { about } from '../data/about';
+import AnimateCat from './AnimateCat.astro';
 ---
-{about.map(line => (
-  <p class='my-3 leading-5 dark:text-gray-200'>
-  {line}
-  </p>
-))}
+
+<section class='flex items-center gap-4'>
+	<section class='max-w-2xl'>
+		{about.map((line) => <p class='my-3 leading-5 dark:text-gray-200'>{line}</p>)}
+	</section>
+	<AnimateCat />
+</section>
