@@ -25,9 +25,9 @@ export const experience = [
 		yearStart: '2019',
 		yearEnd: '2020',
 		company: 'Jalasoft',
-		description: `IoT application for managing screen advertisements. The application was designed to
-          enable users to register and configure their advertisements, which could then be
-          scheduled for display the advertisements on the different registered agents`,
+		description: `IoT application for managing screen advertisements. It was designed to enable users 
+		to register and configure their advertisements, which could be scheduled for display the advertisements 
+		on the different registered agents`,
 		techStack: `Angularjs, Express, Nodejs, Material ui, Git, Gitlab, Jira, RasberryPi3, RasberryPi4,
           Linux Ubuntu, Chromium browser.`,
 		projectName: 'Digital Signage',
