@@ -1,4 +1,5 @@
 ---
+import Techbologies from '../components/Techbologies.astro';
 import { projects } from '../data/projects';
 import Layout from '../layouts/Layout.astro';
 
@@ -21,11 +22,11 @@ if (!data) {
 ---
 
 <Layout title={`Project ${data.title}`}>
-	<main class='md:px-5 max-w-5xl mx-auto flex flex-col-reverse'>
+	<main class='px-3 md:px-5 max-w-5xl mx-auto flex flex-col-reverse'>
 		<section class='max-w-5xl min-h-[calc(100vh-109.6px)]'>
-			<div class='grid grid-cols-1 md:grid-cols-[350px_1fr] gap-x-12 pt-4 md:pt-20'>
+			<div class='grid grid-cols-1 md:grid-cols-[440px_1fr] gap-x-10 pt-4 md:pt-20'>
 				<div class='flex flex-col mb-10'>
-					<picture class='mb-8 w-full relative'>
+					<picture class='w-full relative'>
 						<img
 							class='aspect-[640/447] h-full object-cover w-full max-w-full rounded'
 							src={data.img}
@@ -35,7 +36,7 @@ if (!data) {
 					</picture>
 				</div>
 
-				<aside class='mt-10 md:mt-0'>
+				<aside>
 					<h1
 						class='text-5xl font-black mb-4'
 						style={`view-transition-name: project-title-${data.id}`}
@@ -48,7 +49,7 @@ if (!data) {
 							{data.public ? 'Public' : 'Private'}
 						</span>
 					</p>
-					<div class='flex gap-2 p-2'>
+					<div class='flex gap-2 py-2'>
 						{
 							data.repo && (
 								<a
@@ -99,7 +100,10 @@ if (!data) {
 					</div>
 				</aside>
 			</div>
+			<aside class="pb-4">
+				<h4 class='font-semibold text-gray-800 py-2'>Tech Stack</h4>
+				<Techbologies technologies={data.techStack}/>
+			</aside>
 		</section>
-		<!-- <Navbar client:only="react" /> -->
 	</main>
 </Layout>

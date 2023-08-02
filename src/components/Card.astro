@@ -11,12 +11,14 @@ const { id, title, img, repo, demo } = Astro.props;
 ---
 <li class="relative transition-all shadow-sm hover:contrast-125 hover:shadow-md">
   <a href={`/portfolio/${id}`}>
-    <img
-      alt={`project ${title}`}
-      class='aspect-[640/487] h-full object-cover w-full max-w-full rounded'
-      src={img}
-      style={`view-transition-name: project-${id}`}
-    />
+    <picture>
+      <img
+        alt={`project ${title}`}
+        class='aspect-[640/487] h-full object-cover w-full max-w-full rounded'
+        src={img}
+        style={`view-transition-name: project-${id}`}
+      />
+    </picture>
     <div class="absolute flex justify-between bottom-0 left-0 h-40px w-full bg-white dark:bg-gray-700 p-2 rounded-bl rounded-br font-semibold">
       <h3 style={`view-transition-name: project-title-${id}`}>
         {title}

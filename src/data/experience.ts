@@ -5,8 +5,23 @@ export const experience = [
 		company: 'Jalasoft',
 		description: `Product software designed to handle Work, Inventory, Assets, Events, 
     and Energy in public spaces such us schools, It supports the hero operations.`,
-		techStack: `Typescript Reactjs, Nestjs microservices, Bulljs, Redis, Docker, Chakra-ui, 
-    Sendgrid, Redux toolkit, Git, Github, Jira, Scrum, GCP`,
+		techStack: [
+			'Typescript',
+			'Reactjs',
+			'Nestjs',
+			'microservices',
+			'Bulljs',
+			'Redis',
+			'Docker',
+			'Chakra-ui',
+			'Sendgrid',
+			'Redux toolkit',
+			'Git',
+			'Github',
+			'Jira',
+			'Scrum',
+			'GCP'
+		],
 		projectName: 'Operations Hero',
 		role: 'Full Stack'
 	},
@@ -16,8 +31,23 @@ export const experience = [
 		company: 'Jalasoft',
 		description: `Application designed to manage events and facilitate knowledge-sharing within 
     the organization, with a primary focus on connecting people`,
-		techStack: `Net Core, XUnit, Material-UI, MongoDB.Driver, FluentValidation, React, GraphQL, 
-    ReduxToolkit, Formik, Jest, Cloudinary CDN, GoogleAuth, Git, Gitlab, Trello.`,
+		techStack: [
+			'Net Core',
+			'XUnit',
+			'Material-UI',
+			'MongoDB.Driver',
+			'FluentValidation',
+			'React',
+			'GraphQL',
+			'ReduxToolkit',
+			'Formik',
+			'Jest',
+			'Cloudinary CDN',
+			'GoogleAuth',
+			'Git',
+			'Gitlab',
+			'Trello'
+		],
 		projectName: 'Actio',
 		role: 'Full Stack'
 	},
@@ -28,8 +58,19 @@ export const experience = [
 		description: `IoT application for managing screen advertisements. It was designed to enable users 
 		to register and configure their advertisements, which could be scheduled for display the advertisements 
 		on the different registered agents`,
-		techStack: `Angularjs, Express, Nodejs, Material ui, Git, Gitlab, Jira, RasberryPi3, RasberryPi4,
-          Linux Ubuntu, Chromium browser.`,
+		techStack: [
+			'Angularjs',
+			'Express',
+			'Nodejs',
+			'Material-ui',
+			'Git',
+			'Gitlab',
+			'Jira',
+			'RasberryPi3',
+			'RasberryPi4',
+			'Linux Ubuntu',
+			'Chromium browser'
+		],
 		projectName: 'Digital Signage',
 		role: 'Intern'
 	}

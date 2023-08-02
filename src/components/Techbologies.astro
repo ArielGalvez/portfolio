@@ -1,0 +1,33 @@
+---
+import { random, rainBowColors } from '../utils/rainBowUtils';
+export interface Props {
+	technologies: string[];
+}
+const { technologies } = Astro.props;
+let colors: number[] = [random(0, 4)];
+for (let i = 0; i < technologies.length - 1; i++) {
+	const newNumber = random(0, 4);
+	if (colors[colors.length - 1] === newNumber) {
+		i--;
+	} else {
+		colors.push(newNumber);
+	}
+}
+---
+
+<section class='flex gap-1 flex-wrap'>
+	{
+		technologies.map((name, i) => (
+			<span
+				class='px-2 border brightness-100 text-black text-sm'
+				style={`
+        border-color: rgb(${rainBowColors[colors[i]]});
+        background-color: rgb(${rainBowColors[colors[i]]});
+        border-radius:2px;
+      `}
+			>
+				{name}
+			</span>
+		))
+	}
+</section>
