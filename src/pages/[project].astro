@@ -2,6 +2,7 @@
 import Techbologies from '../components/Techbologies.astro';
 import { projects } from '../data/projects';
 import Layout from '../layouts/Layout.astro';
+import { bgRainBowColorProps } from '../utils/bgRainBowColorProps';
 
 export async function getStaticPaths() {
 	return projects.map((project) => {
@@ -30,25 +31,26 @@ if (!data) {
 						<img
 							class='aspect-[640/447] h-full object-cover w-full max-w-full rounded'
 							src={data.img}
-							alt={`Portada del libro ${data.title}`}
+							alt={`Project ${data.title}`}
 							style={`view-transition-name: project-${data.id}`}
 						/>
 					</picture>
 				</div>
 
-				<aside>
+				<aside class='group'>
 					<h1
-						class='text-5xl font-black mb-4'
-						style={`view-transition-name: project-title-${data.id}`}
+						class={`${bgRainBowColorProps.class} text-5xl inline`}
+						style={`${bgRainBowColorProps.style} view-transition-name: project-title-${data.id}`}
 					>
 						{data.title}
 					</h1>
-					<p class='text-lg mb-4 dark:text-gray-200'>{data.description}</p>
-					<p class='font-semibold text-gray-800'>
-						<span>
-							{data.public ? 'Public' : 'Private'}
-						</span>
-					</p>
+					<p class='text-lg my-4 dark:text-gray-200'>{data.description}</p>
+					<span
+						class='text-gray-400 border border-gray-400 px-2 dark:text-gray-400 dark:border-gray-400'
+						style='border-radius:2px;'
+					>
+						{data.public ? 'Public' : 'Private'}
+					</span>
 					<div class='flex gap-2 py-2'>
 						{
 							data.repo && (
@@ -98,12 +100,12 @@ if (!data) {
 							</svg>
 						</a>
 					</div>
+					<aside class='pb-4'>
+						<h4 class='font-semibold text-gray-800 py-2 dark:text-white'>Tech Stack</h4>
+						<Techbologies technologies={data.techStack} />
+					</aside>
 				</aside>
 			</div>
-			<aside class="pb-4">
-				<h4 class='font-semibold text-gray-800 py-2'>Tech Stack</h4>
-				<Techbologies technologies={data.techStack}/>
-			</aside>
 		</section>
 	</main>
 </Layout>

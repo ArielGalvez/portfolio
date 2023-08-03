@@ -2,9 +2,8 @@
 import { RainSection } from './RainSection';
 import { bgRainBowColorProps } from '../utils/bgRainBowColorProps'
 ---
-<section class="group">
-  <section class='text-center py-4'>
-
+<section class="group py-12">
+  <section class='text-center'>
     <h1 class='text-2xl xs:text-4xl font-bold text-gray-400 dark:text-gray-300 align-middle'>
       Hey there! I'm
         <span
@@ -12,7 +11,7 @@ import { bgRainBowColorProps } from '../utils/bgRainBowColorProps'
         >Ariel Galvez</span
       >
     </h1>
-    <p class='text-xl font-bold text-gray-500 dark:text-gray-400'>Full stack developer</p>
+    <p class='text-xl font-bold text-gray-500 dark:text-gray-400 pb-1'>Full stack developer</p>
   </section>
-  <RainSection cols={46} rows={10} minDelay={200} maxDelay={800} client:only='react' />
+  <RainSection cols={32} rows={10} minDelay={200} maxDelay={800} client:only='react' />
 </section>

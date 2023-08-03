@@ -35,7 +35,7 @@ const Navbar = () => {
 		const baseUrl = `${globalThis.window?.location?.origin}/portfolio/`;
 		return (
 			<>
-				<NavbarItem title='About' href={`${baseUrl}#about`} />
+				<NavbarItem title='About me' href={`${baseUrl}#about`} />
 				<NavbarItem title='Experience' href={`${baseUrl}#experience`} />
 				<NavbarItem title='Projects' href={`${baseUrl}#projects`} />
 				<NavbarItem title='Contact' href={`${baseUrl}#contact`} />

@@ -31,13 +31,14 @@ const { title } = Astro.props;
 	@import url(https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed);
 	:root {
 		--bg-color: #f6f6f6;
-		--tw-gradient-stops: #3B82F6 50%, rgb(166,218,248), rgb(211,203,255), rgb(171,238,219), rgb(254,202,177), rgb(254,177,191);
+		--tw-gradient-stops: #3B82F6 50%, rgb(150, 211, 247), rgb(197, 187, 254), rgb(156, 237, 214), rgb(255, 189, 158), rgb(252, 159, 176);
 		--cat-color: #393939;
 		--cat-eyes-color: #B8CD8E;
 	}
 
 	.dark {
   	color-scheme: dark;
+		--tw-gradient-stops: #3B82F6 50%, rgb(166,218,248), rgb(211,203,255), rgb(171,238,219), rgb(254,202,177), rgb(254,177,191);
 		--bg-color: #292b31;
 		--cat-color: #DCD7D3;
 		--cat-eyes-color: #6A97C3;
@@ -50,10 +51,8 @@ const { title } = Astro.props;
 	}
 
 	.rain {
-    /* padding: 0 0.25rem; */
   }
   .drop {
-		/* margin: 0.25rem 0; */
     /* padding: 1rem; */
     display: block;
     width: 2vmax;
@@ -80,25 +79,17 @@ if (document.startViewTransition) {
 	window.navigation.addEventListener('navigate', (event) => {
 		const toUrl = new URL(event.destination.url)
 
-		// es una página externa? si es así, lo ignoramos
+		// ignore is external page
 		if (location.origin !== toUrl.origin || toUrl.protocol === 'blob:') return
 
 		// if (location.href.includes('#')) return
 
-		// si es una navegación en el mismo dominio (origen)
 		event.intercept({
 			async handler() {
-				// vamos a cargar la página de destino
-				// utilizando un fetch para obtener el HTML
-				const response = await fetch(toUrl.pathname) // /clean-code
+				const response = await fetch(toUrl.pathname)
 				const text = await response.text()
-				// quedarnos sólo con el contenido del html dentro de la etiqueta body
-				// usamos un regex para extraerlo
 				const [, data] = text.match(/<body>([\s\S]*)<\/body>/i)
-
-				// utilizar la api de View Transition API
 				document.startViewTransition(() => {
-					// el scroll hacia arriba del todo
 					document.body.innerHTML = data
 					// document.documentElement.scrollTop = 0
 				})

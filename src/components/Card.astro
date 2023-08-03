@@ -1,4 +1,5 @@
 ---
+import { bgRainBowColorProps } from '../utils/bgRainBowColorProps';
 export interface Props {
   id: string;
   title: string;
@@ -9,7 +10,7 @@ export interface Props {
 
 const { id, title, img, repo, demo } = Astro.props;
 ---
-<li class="relative transition-all shadow-sm hover:contrast-125 hover:shadow-md">
+<li class="relative transition-all shadow-sm hover:contrast-125 hover:shadow-md group/card">
   <a href={`/portfolio/${id}`}>
     <picture>
       <img
@@ -20,7 +21,9 @@ const { id, title, img, repo, demo } = Astro.props;
       />
     </picture>
     <div class="absolute flex justify-between bottom-0 left-0 h-40px w-full bg-white dark:bg-gray-700 p-2 rounded-bl rounded-br font-semibold">
-      <h3 style={`view-transition-name: project-title-${id}`}>
+      <h3 
+      class={bgRainBowColorProps.classCard}
+      style={`${bgRainBowColorProps.style} view-transition-name: project-title-${id}`}>
         {title}
       </h3>
       <div class="flex gap-2">

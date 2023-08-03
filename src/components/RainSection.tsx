@@ -166,7 +166,7 @@ export function RainSection(props: Props): React.ReactElement {
 	return (
 		<section
 			ref={ref}
-			className={`flex overflow-hidden ${className}`}
+			className={`flex justify-between overflow-hidden ${className}`}
 			style={{
 				minHeight: `calc(2vmax*${rows})`
 			}}
