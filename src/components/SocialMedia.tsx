@@ -17,7 +17,7 @@ export function SocialMedia(): React.ReactElement {
 		<>
 			<li>
 				<a
-					href='https://www.linkedin.com/in/ariel-g%C3%A1lvez-3b5119260/'
+					href='https://www.linkedin.com/in/ariel-galvez/'
 					className='transition-all shadow-sm hover:contrast-125 hover:shadow-md'
 				>
 					<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' width='48px' height='48px'>
